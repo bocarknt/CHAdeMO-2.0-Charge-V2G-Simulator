@@ -48,28 +48,20 @@ Station Simulator (Python) ←── UART ──→ Station MC (STM32)
 ## 📁 Structure du dépôt
 
 ```
-chademo-v2g-simulator/
+CHAdeMO-2.0-Charge-V2G-Simulator/
 │
-├── charge/                         # Mode charge standard
+├── charge/                         # Mode charge standard (G2V)
 │   ├── simulators/
-│   │   ├── battery_sim.py          # Simulateur véhicule (charge)
+│   │   ├── sim_battery.py          # Simulateur véhicule (charge)
 │   │   └── station_sim.py          # Simulateur borne (charge)
 │   └── firmware/
-│       ├── battery_mc_main.c       # Firmware Battery MC (charge)
-│       └── station_mc_main.c       # Firmware Station MC (charge)
+│       ├── G2V_EV_STM32/           # Projet CubeIDE Battery MC
+│       └── G2V_EVSE_STM32/         # Projet CubeIDE Station MC
 │
 ├── v2g/                            # Mode V2G — Vehicle-to-Grid
-│   ├── simulators/
-│   │   ├── v2g_battery_sim.py      # Simulateur véhicule (V2G)
-│   │   └── v2g_station_sim.py      # Simulateur borne (V2G)
-│   └── firmware/
-│       ├── v2g_battery_mc_main.c   # Firmware Battery MC (V2G)
-│       └── v2g_station_mc_main.c   # Firmware Station MC (V2G)
-│
-├── docs/
-│   ├── v2g_discharge_sequence.svg  # Diagramme de séquence complet
-│   ├── v2g_discharge_loop.svg      # Diagramme boucle de décharge
-│   └── v2g_discharge_sequence.puml # Source PlantUML
+│   ├── V2G_similateur/             # Simulateurs Python V2G
+│   ├── V2G_BATTERY_STM32/          # Projet CubeIDE Battery MC (V2G)
+│   └── V2G_station_STM32/          # Projet CubeIDE Station MC (V2G)
 │
 └── README.md
 ```

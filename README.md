@@ -51,16 +51,20 @@ Station Simulator (Python) ←── UART ──→ Station MC (STM32)
 chademo-v2g-simulator/
 │
 ├── charge/                         # Mode charge standard
-│   ├── battery_sim.py              # Simulateur véhicule (charge)
-│   ├── station_sim.py              # Simulateur borne (charge)
-│   ├── battery_mc_main.c           # Firmware Battery MC (charge)
-│   └── station_mc_main.c           # Firmware Station MC (charge)
+│   ├── simulators/
+│   │   ├── battery_sim.py          # Simulateur véhicule (charge)
+│   │   └── station_sim.py          # Simulateur borne (charge)
+│   └── firmware/
+│       ├── battery_mc_main.c       # Firmware Battery MC (charge)
+│       └── station_mc_main.c       # Firmware Station MC (charge)
 │
-├── v2g/                            # Mode V2G
-│   ├── v2g_battery_sim.py          # Simulateur véhicule (V2G)
-│   ├── v2g_station_sim.py          # Simulateur borne (V2G)
-│   ├── v2g_battery_mc_main.c       # Firmware Battery MC (V2G)
-│   └── v2g_station_mc_main.c       # Firmware Station MC (V2G)
+├── v2g/                            # Mode V2G — Vehicle-to-Grid
+│   ├── simulators/
+│   │   ├── v2g_battery_sim.py      # Simulateur véhicule (V2G)
+│   │   └── v2g_station_sim.py      # Simulateur borne (V2G)
+│   └── firmware/
+│       ├── v2g_battery_mc_main.c   # Firmware Battery MC (V2G)
+│       └── v2g_station_mc_main.c   # Firmware Station MC (V2G)
 │
 ├── docs/
 │   ├── v2g_discharge_sequence.svg  # Diagramme de séquence complet
@@ -94,7 +98,6 @@ Station Sim → TX MSG109 (auto) → ...
 | **3 — Décharge** | Boucle V2G 100 ms | 0x102 + 0x200 / 0x109 + 0x208 |
 | **4 — Arrêt propre** | Fin de session | stop_flag = 1 |
 
-![Diagramme de séquence](docs/v2g_discharge_sequence.svg)
 
 ---
 

@@ -23,7 +23,7 @@ Battery Simulator (Python) ←── UART ──→ Battery MC (STM32)
                                                │
 Station Simulator (Python) ←── UART ──→ Station MC (STM32)
 ```
-![Architechture du système](schema_sys.png)
+
 ---
 
 ## 🏗️ Architecture
@@ -149,7 +149,7 @@ Battery MC  GND  ──────────── GND   Station MC
 
 Résistances de terminaison 120Ω aux deux extrémités du bus.
 ```
-
+![Schéma de cablage du système](schema_sys.png)
 ### 3. Lancer les simulateurs
 
 ```bash

@@ -7,7 +7,7 @@ Implémentation complète du protocole **CHAdeMO 2.0** (charge standard + Vehicl
 
 ---
 
-## 📋 Description
+## Description
 
 Ce projet met en œuvre la séquence de communication CHAdeMO 2.0 définie par l'**IEEE Std 2030.1.1-2021**, couvrant :
 
@@ -26,7 +26,7 @@ Station Simulator (Python) ←── UART ──→ Station MC (STM32)
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 ### Composants
 
@@ -45,7 +45,7 @@ Station Simulator (Python) ←── UART ──→ Station MC (STM32)
 
 ---
 
-## 📁 Structure du dépôt
+## Structure du dépôt
 
 ```
 CHAdeMO-2.0-Charge-V2G-Simulator/
@@ -74,7 +74,7 @@ CHAdeMO-2.0-Charge-V2G-Simulator/
 
 ---
 
-## 🔄 Séquence de communication
+## Séquence de communication
 
 ### Mode Charge Standard
 
@@ -99,7 +99,7 @@ Station Sim → TX MSG109 (auto) → ...
 
 ---
 
-## 🖥️ Interfaces simulateurs
+## Interfaces simulateurs
 
 ### Mode Charge Standard (G2V)
 
@@ -115,7 +115,7 @@ Station Sim → TX MSG109 (auto) → ...
 
 ---
 
-## ⚙️ Prérequis
+## Prérequis
 
 ### Simulateurs Python
 
@@ -127,18 +127,16 @@ Python 3.8+ requis. Tkinter inclus dans la plupart des distributions Python.
 
 ### Firmware STM32
 
-- STM32CubeIDE 1.14+
-- STM32CubeMX
+- STM32CubeIDE 1.19.0
 - Carte : STM32 Nucleo-L476RG (ou compatible série L4)
 - Transceiver CAN : MCP2551 ou SN65HVD230
 
 ---
 
-## 🚀 Lancement
+## Lancement
 
 ### 1. Flasher les firmwares
-
-Ouvrir les fichiers `.c` dans STM32CubeIDE, les intégrer dans un projet HAL généré par CubeMX avec CAN et UART2 activés, compiler et flasher chaque Nucleo.
+Importer les projets dans STM32CubeIDE,compiler et flasher chaque Nucleo.
 
 ### 2. Câblage
 
@@ -170,7 +168,7 @@ python v2g/v2g_station_sim.py
 
 ---
 
-## 📡 Protocole UART
+## Protocole UART
 
 ### Format des messages
 
@@ -202,7 +200,7 @@ valeur_CAN = 0xFF - courant_amperes
 
 ---
 
-## 🔋 Simulation de la décharge
+## Simulation de la décharge
 
 La décroissance du SOC suit la formule :
 
@@ -221,7 +219,7 @@ La décroissance du SOC suit la formule :
 
 ---
 
-## 🛠️ Points techniques notables
+## Points techniques notables
 
 ### Gestion non-bloquante en Phase 3
 
@@ -251,7 +249,7 @@ La trame CAN `0x7FF` déclenche un reset global des deux MCU via `HAL_NVIC_Syste
 
 ---
 
-## 📊 Résultats
+## Résultats
 
 - Latence bout-en-bout (Sim → MC → CAN → MC → Sim) : **< 20 ms** dans 95 % des cas
 - Boucle de décharge stable à **100 ms** sur toute la durée de session
@@ -260,7 +258,7 @@ La trame CAN `0x7FF` déclenche un reset global des deux MCU via `HAL_NVIC_Syste
 
 ---
 
-## 📚 Références
+## Références
 
 - IEEE Std 2030.1.1-2021 — *Standard for DC Quick and Bi-directional Charging of Plug-In Electric Vehicles*
 - CHAdeMO Association — [chademo.com](https://www.chademo.com)
@@ -268,7 +266,7 @@ La trame CAN `0x7FF` déclenche un reset global des deux MCU via `HAL_NVIC_Syste
 
 ---
 
-## 👤 Auteur
+## Auteur
 
 **Bocar Kante**  
 Master 1 EEA — Systèmes et Microsystèmes Embarqués  

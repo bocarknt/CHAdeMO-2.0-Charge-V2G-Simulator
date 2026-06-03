@@ -53,13 +53,19 @@ CHAdeMO-2.0-Charge-V2G-Simulator/
 ├── charge/                         # Mode charge standard (G2V)
 │   ├── simulators/
 │   │   ├── sim_battery.py          # Simulateur véhicule (charge)
-│   │   └── station_sim.py          # Simulateur borne (charge)
+│   │   ├── station_sim.py          # Simulateur borne (charge)
+│   │   ├── g2v_battery_sim.png     # Capture IHM Battery Simulator
+│   │   └── g2v_station_sim.png     # Capture IHM Station Simulator
 │   └── firmware/
 │       ├── G2V_EV_STM32/           # Projet CubeIDE Battery MC
 │       └── G2V_EVSE_STM32/         # Projet CubeIDE Station MC
 │
 ├── v2g/                            # Mode V2G — Vehicle-to-Grid
-│   ├── V2G_similateur/             # Simulateurs Python V2G
+│   ├── V2G_similateur/
+│   │   ├── v2g_battery_sim.py      # Simulateur véhicule (V2G)
+│   │   ├── v2g_station_sim.py      # Simulateur borne (V2G)
+│   │   ├── IHM_sim_battery.png     # Capture IHM Battery Simulator V2G
+│   │   └── IHM_sim_station.png     # Capture IHM Station Simulator V2G
 │   ├── V2G_BATTERY_STM32/          # Projet CubeIDE Battery MC (V2G)
 │   └── V2G_station_STM32/          # Projet CubeIDE Station MC (V2G)
 │
@@ -90,6 +96,22 @@ Station Sim → TX MSG109 (auto) → ...
 | **3 — Décharge** | Boucle V2G 100 ms | 0x102 + 0x200 / 0x109 + 0x208 |
 | **4 — Arrêt propre** | Fin de session | stop_flag = 1 |
 
+
+---
+
+## 🖥️ Interfaces simulateurs
+
+### Mode Charge Standard (G2V)
+
+| Battery Simulator | Station Simulator |
+|---|---|
+| ![Battery Sim](charge/simulators/g2v_battery_sim.png) | ![Station Sim](charge/simulators/g2v_station_sim.png) |
+
+### Mode V2G — Vehicle-to-Grid
+
+| Battery Simulator V2G | Station Simulator V2G |
+|---|---|
+| ![Battery Sim V2G](v2g/V2G_similateur/IHM_sim_battery.png) | ![Station Sim V2G](v2g/V2G_similateur/IHM_sim_station.png) |
 
 ---
 

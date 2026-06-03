@@ -275,6 +275,3 @@ Université de Toulouse
 
 ---
 
-## 📄 Licence
-
-Ce projet est à usage académique. Libre de réutilisation avec attribution.

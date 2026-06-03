@@ -23,7 +23,7 @@ Battery Simulator (Python) ←── UART ──→ Battery MC (STM32)
                                                │
 Station Simulator (Python) ←── UART ──→ Station MC (STM32)
 ```
-
+![Architechture du système](schema_sys.png)
 ---
 
 ## 🏗️ Architecture
